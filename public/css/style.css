@@ -1,0 +1,32 @@
+.navBg{
+  height: 100%;
+  color: #6B7AA1
+}
+
+.logo{
+  cursor: pointer;
+}
+
+nav{
+  height: 100px ;
+  background-color: #E7E0C9;
+}
+
+nav a{
+  font-size: medium;
+  cursor: pointer;
+  color: #6B7AA1;
+  text-decoration: none;
+  transition: color 200ms ease-in;
+}
+
+nav a:hover{
+text-decoration: none;
+  color:#11324D
+}
+
+.footerBottom{
+  height: 50px;
+  background-color: #11324D;
+  color:#E7E0C9;
+}

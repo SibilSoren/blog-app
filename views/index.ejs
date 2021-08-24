@@ -1,0 +1,11 @@
+<%- include("./partials/header") -%>
+<div class="container">
+  <h1>Home</h1>
+  <p><%=description%></p>
+  <% for(let i in content){ %>
+    <h2><%=content[i].title%></h2>
+    <p><%=content[i].content%></p>
+  <%}%>
+
+</div>
+<%- include("./partials/footer") -%>
