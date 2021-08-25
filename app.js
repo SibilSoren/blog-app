@@ -2,6 +2,8 @@ const express = require("express");
 const chalk = require("chalk");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const _ = require('lodash');
+// var _ = require('lodash/core');
 
 const app = express();
 
@@ -49,8 +51,9 @@ app.get("/posts/:postName",(req,res)=>{
   let requestedTitle = req.params.postName;
 
   for(let i in posts){
-    if(requestedTitle === posts[i].title){
-      console.log("Match found!")
+    if(_.kebabCase(requestedTitle) === _.kebabCase(posts[i].title)){
+      console.log("Match found!");
+      res.render("posts",{postTitle:posts[i].title,postContent:posts[i].content})
     }
   }
 

@@ -4,7 +4,7 @@
   <p><%=description%></p>
   <% for(let i in content){ %>
     <h2><%=content[i].title%></h2>
-    <p><%=content[i].content%></p>
+    <p><%=content[i].content.substring(0,100) + " ..."%> <a href="/posts/<%=content[i].title%>">Read more</a></p>
   <%}%>
 
 </div>
